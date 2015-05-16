@@ -10,7 +10,11 @@ class TripsController < ApplicationController
   # GET /trips/1
   # GET /trips/1.json
   def show
+    @comments = @trip.comments.all
+    @comment = @trip.comments.build
+
   end
+
 
   # GET /trips/new
   def new
